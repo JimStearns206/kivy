@@ -44,7 +44,7 @@ MICRO = 1
 RELEASE = False
 
 # To distinguish NOAA/NMFS/NWFSC/AUV changes to kivy:
-AUV_12RB_REV='.12rb0'
+AUV_12RB_REV='12rb0'
 
 __version__ = '%d.%d.%d' % (MAJOR, MINOR, MICRO)
 
@@ -121,7 +121,7 @@ def require(version):
         # check x y z
         v = version.split('.')
         if len(v) != 3:
-            if 'dev0' in v:
+            if 'dev0' in v or ('dev0' + AUV_12RB_REV) in v:
                 tag = v.pop()
             else:
                 raise Exception('Revision format must be X.Y.Z[-tag]')
