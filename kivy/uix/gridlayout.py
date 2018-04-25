@@ -486,7 +486,7 @@ class GridLayout(Layout):
                     # add to the min height whatever remains from size_hint
                     if len(rows) == index:
                         rows.append(0)
-						print("** Appended row with value of 0 for index {0}".format(index))
+                        print("** Appended row with value of 0 for index {0}".format(index))
                     rows[index] += stretch_h * row_stretch / rows_weight
 
     def _iterate_layout(self, count):
