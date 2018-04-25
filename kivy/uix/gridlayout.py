@@ -359,10 +359,10 @@ class GridLayout(Layout):
             else:
                 if rows_sh is None or len(rows_sh) <= row:
                     rows_sh.append(0)
-					print("** Appended entry for index {0}".format(row))
+                    print("** Appended entry for index {0}".format(row))
                 if rows_sh[row] is None:
                     rows_sh[row] = 0
-					print("** Replaced None value w/0 for index {0}".format(row))
+                    print("** Replaced None value w/0 for index {0}".format(row))
                 rows_sh[row] = nmax(rows_sh[row], shh)
                 if shh_min is not None:
                     has_bound_y = True
