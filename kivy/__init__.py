@@ -43,10 +43,15 @@ MINOR = 10
 MICRO = 1
 RELEASE = False
 
+# To distinguish NOAA/NMFS/NWFSC/AUV changes to kivy:
+AUV_12RB_REV='.12rb0'
+
 __version__ = '%d.%d.%d' % (MAJOR, MINOR, MICRO)
 
 if not RELEASE and '.dev0' not in __version__:
     __version__ += '.dev0'
+if not RELEASE and AUV_12RB_REV not in __version__:
+    __version__ += AUV_12RB_REV
 
 try:
     from kivy.version import __hash__, __date__
